@@ -1,0 +1,45 @@
+{
+  "name": "@edumind/footer",
+  "version": "1.2.1",
+  "description": "Componente footer oficial del ecosistema EDUmind",
+  "author": "Luis Vilela Acuña <contacto@edumind.es>",
+  "license": "AGPL-3.0",
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "registry": "http://localhost:4873",
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc && npm run build:esm && npm run copy:css",
+    "build:esm": "tsc --module esnext --outDir dist/esm",
+    "copy:css": "cp src/*.css dist/ && cp src/*.css dist/esm/",
+    "prepublishOnly": "npm run build",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "edumind",
+    "footer",
+    "educacion",
+    "react",
+    "componente"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edumind/footer"
+  }
+}

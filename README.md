@@ -36,7 +36,7 @@ import '@edumind/footer/styles';
 | `versionStage` | `Alpha\|Beta\|RC\|Stable` | — | Etapa de desarrollo |
 | `locale` | `es\|en\|gl` | `'es'` | Idioma del footer |
 | `density` | `full\|compact` | `'full'` | Densidad visual |
-| `author` | `string` | `'EDUmind Team'` | Autor en el copyright |
+| `author` | `string` | `'Luis Vilela Acuña'` | Autor en el copyright |
 | `homeHref` | `string` | — | URL del botón inicio |
 | `previousPage` | `NavigationLink` | — | Enlace anterior |
 | `nextPage` | `NavigationLink` | — | Enlace siguiente |

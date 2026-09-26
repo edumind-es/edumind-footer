@@ -9,11 +9,11 @@
   /* Modo Light por defecto */
   --ef-bg:           var(--footer-bg, #f8f9fa);
   --ef-border:       var(--footer-border, rgba(15, 23, 42, 0.08));
-  --ef-text:         var(--footer-text, #64748b);
+  --ef-text:         var(--footer-text, #4b5563);      /* 7,2:1 sobre #f8f9fa */
   --ef-text-strong:  var(--footer-text-strong, #334155);
-  --ef-link:         var(--footer-link, #3b82f6);
-  --ef-link-hover:   var(--footer-link-hover, #2563eb);
-  --ef-support:      var(--mundo-fisico, #10b981);
+  --ef-link:         var(--footer-link, #1d4ed8);      /* 6,4:1 */
+  --ef-link-hover:   var(--footer-link-hover, #1e40af);
+  --ef-support:      var(--footer-support, #047857);   /* 5,2:1; antes heredaba --mundo-fisico (2,4:1) */
   --ef-badge-bg:     var(--footer-badge-bg, #e2e8f0);
   --ef-badge-text:   var(--footer-badge-text, #475569);
   --ef-radius:       6px;
@@ -41,12 +41,13 @@
   .edumind-footer {
     --ef-bg:          #171b26;
     --ef-border:      #2a3050;
-    --ef-text:        #7a8099;
+    --ef-text:        #a3aac2;   /* 7,4:1 sobre #171b26 */
     --ef-text-strong: #e8eaf2;
     --ef-link:        #4f8ef7;
     --ef-link-hover:  #7ab3ff;
     --ef-badge-bg:    #1e2333;
     --ef-badge-text:  #9a9fbf;
+    --ef-support:     #34d399;
   }
 }
 
@@ -55,12 +56,13 @@
 [data-theme="dark"] .edumind-footer {
   --ef-bg:          #171b26;
   --ef-border:      #2a3050;
-  --ef-text:        #7a8099;
+  --ef-text:        #a3aac2;
   --ef-text-strong: #e8eaf2;
   --ef-link:        #4f8ef7;
   --ef-link-hover:  #7ab3ff;
   --ef-badge-bg:    #1e2333;
   --ef-badge-text:  #9a9fbf;
+  --ef-support:     #34d399;
 }
 
 /* ── Variante compact ── */
@@ -149,7 +151,7 @@
 }
 
 .edumind-footer__version-label {
-  opacity: 0.6;
+  /* Sin opacidad: con 0,6 el texto bajaba a 2,3:1 (WCAG AA exige 4,5:1) */
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-size: 0.7rem;
@@ -198,7 +200,7 @@
 .edumind-footer__trademark {
   font-size: 0.75rem;
   color: var(--ef-text);
-  opacity: 0.7;
+  /* Sin opacidad: con 0,7 el texto bajaba a 2,6:1 */
   border-top: 1px solid var(--ef-border);
   padding-top: 0.6rem;
 }
